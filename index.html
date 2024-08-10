@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script src="src/script.js" defer></script>
+    <title>Авторизация gromqa.ru</title>
+</head>
+
+<body>
+    <form class="form" id="form">
+        <h2 class="header">Вход на сайт</h2>
+        <input type="email" class="input" name="mail" id="mail" placeholder="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+        <input type="password" class="input" name="pass" id="pass" placeholder="Пароль" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,}" required>
+        <button id="loginButton" disabled>Войти</button>
+        <button class="forgot defaultButton" id="forgotEmailButton">Восстановить пароль</button>
+    </form>
+
+    <form class="form" id="forgotForm">
+        <h2 class="header">Восстановить пароль</h2>
+        <input type="email" class="input" name="mail" id="mailForgot" placeholder="E-mail">
+        <button id="restoreEmailButton">Отправить код</button>
+        <button id="exitRestoreButton" class="exitButton defaultButton"><img class="exitIcon" src="static/cross.svg" alt="exit icon"></button>
+   </form>
+
+    <div class="message" id="message">
+        <h2 id="messageHeader">Всплывающее сообщение</h2>
+        <button id="exitMessageButton" class="exitButton defaultButton"><img class="exitIcon" src="static/cross.svg" alt="exit icon"></button>
+    </div>
+    
+    <div class="link">
+        <img class="thunder" src="static/thunder.svg">
+        <a target="_blank" href="https://gromqa.ru/">GromQA</a> 
+    </div>
+
+</body>
+</html>
